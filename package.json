@@ -1,0 +1,19 @@
+{
+  "name": "webapp-poetry",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "^1.11.0",
+    "morgan": "~1.9.1",
+    "reques": "0.0.1-security",
+    "request": "^2.88.2",
+    "vue": "^2.6.11"
+  }
+}
