@@ -1,27 +1,33 @@
 block content
 html.html_class(onclick="location.reload();")
-  body.body_class(
-    style="background:url('#{data.long_photo}') no-repeat;background-size:cover;background-attachment: fixed;background-repeat:no-repeat;onclick='javascript:location.reload()'")
-      //- 上边搜索框dev
-      dev
+  head
+    mata(name="referrer" content="no-referrer")
+  body(onclick='javascript:location.reload()')
+      //- .body_class(style="background:url('#{data.long_photo}') no-repeat;background-size:cover;background-attachment: fixed;background-repeat:no-repeat;")
+      //- 最大dev
+      dev(style="padding-bottom:100%;")
+        //- 背景图片
+        img(src='#{data.long_photo}' referrerpolicy="no-referrer" style="width: 100%;height: 100%;object-fit:cover;")
 
-      br
-      //- 中间内容框（诗歌内容）
-      dev
-        p
-          font.content_front_class(face="隶书" size="7" style="color:white;") !{data.content}
+        //- 上边搜索框dev
+        dev
+        
+        br
+        //- 中间内容框（诗歌内容）
+        dev
+          p
+            font(face="隶书" size="7" style="color:black;") !{data.content}
+        br
+        //- 中间右下出自框（诗歌来自和作者）
+        dev(align="right" style="hight:100px;")
+          p
+            //- white
+            font(face="隶书" size="7" style="color:black;" ) --出自&nbsp;#{data.content_from}&nbsp;&nbsp;&nbsp;&nbsp;#{data.author}
 
-      br
-      //- 右下出自框（诗歌来自和作者）
-      dev.author_dev_class(align="right" style="hight:100px;")
-        p
-          font.author_font_class(face="隶书" size="7" style="color:white;" ) --出自&nbsp;#{data.content_from}&nbsp;&nbsp;&nbsp;&nbsp;#{data.author}
+        dev
+        //- 右边详情框（用户头像，喜欢数量，评论数量，转发）
 
-      dev
-      //- 右边详情框（用户头像，喜欢数量，评论数量，转发）
-
-      dev
-      //- 下边切换框（首页，收藏，喜欢，历史，上传，用户）
-        span
+        dev
+        //- 下边切换框（首页，收藏，喜欢，历史，上传，用户）
 
     
