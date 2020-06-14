@@ -1,5 +1,50 @@
-extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+html.html_class(onclick="location.reload();") 
+  meta(name="referrer" content="no-referrer")
+  //- body
+  body.body_class(style="background:url('#{data.long_photo}') no-repeat;background-size:cover;background-attachment: fixed;background-repeat:no-repeat;")
+      //- 上边搜索框dev
+      dev(style="width:100%;height:144px;display: block;")
+        //-  style="height:50px;width:50px;" display: block;
+        span(style="float:left;margin-left:25%;margin-top:16px;width:50%;height:96px;text-align:center;")
+          a(href="" style="color:#bfbfbf;text-decoration:none;height:64px;width:64px;font-size:48px;") 关注
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          a(href="" style="color:#bfbfbf;text-decoration:none;height:64px;width:64px;font-size:48px;") 推荐
+        //- float:right;margin-right:5%;
+        i(style="float:right;margin-right:96px;margin-top:16px;width:10%;height:96px;")
+          img(src="/images/icon/search.png" style="height:72px;width:72px;")
+
+
+      //- br
+
+      //- 中间内容框
+      //- 诗歌内容 
+      br
+      br
+      br
+      dev
+        p
+          font(face="隶书" size="7" style="color:#bfbfbf;")  &nbsp;&nbsp;!{data.content}
+      br
+      //- 诗歌来自和作者
+      dev(align="right" style="")
+        p
+          //- white
+          font(face="隶书" size="7" style="color:#bfbfbf;" ) --出自&nbsp;#{data.content_from}&nbsp;&nbsp;&nbsp;&nbsp;#{data.author}
+
+      //- 右边详情框（用户头像，喜欢数量，评论数量，转发）
+      //- dev
+      //-   p 用户
+      //-   p 喜欢
+      //-   p 评论
+      //-   p 转发
+      
+      //- 下边切换框（首页，收藏，喜欢，历史，上传，用户）
+      //- dev
+      //-   p 首页
+      //-   p 上传
+      //-   p 我
+        //- p 收藏  p 喜欢  p 历史
+
+      //- 背景图片 解决跨域
+      //- img(src='#{data.long_photo}' referrerpolicy="no-referrer" style="width: 100%;height: 100%;object-fit:cover;z-index:-1;")
