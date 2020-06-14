@@ -4,12 +4,12 @@ html.html_class(onclick="location.reload();")
   //- body
   body.body_class(style="background:url('#{data.long_photo}') no-repeat;background-size:cover;background-attachment: fixed;background-repeat:no-repeat;")
       //- 上边搜索框dev
-      dev(style="width:100%;height:144px;display: block;")
+      dev(style="width:100%;height:144px;")
         //-  style="height:50px;width:50px;" display: block;
         span(style="float:left;margin-left:25%;margin-top:16px;width:50%;height:96px;text-align:center;")
-          a(href="" style="color:#bfbfbf;text-decoration:none;height:64px;width:64px;font-size:48px;") 关注
+          a(href="" style="color:#515151;text-decoration:none;height:64px;width:64px;font-size:48px;") 关注
           &nbsp;&nbsp;&nbsp;&nbsp;
-          a(href="" style="color:#bfbfbf;text-decoration:none;height:64px;width:64px;font-size:48px;") 推荐
+          a(href="" style="color:#515151;text-decoration:none;height:64px;width:64px;font-size:48px;") 推荐
         //- float:right;margin-right:5%;
         i(style="float:right;margin-right:96px;margin-top:16px;width:10%;height:96px;")
           img(src="/images/icon/search.png" style="height:72px;width:72px;")
@@ -22,23 +22,40 @@ html.html_class(onclick="location.reload();")
       br
       br
       br
-      dev
-        p
-          font(face="隶书" size="7" style="color:#bfbfbf;")  &nbsp;&nbsp;!{data.content}
-      br
+      //内容
+      dev(style="float:left;width:80%;")
+        p(style="")
+          font(face="隶书" size="7" style="color:#515151;")  &nbsp;&nbsp;!{data.content}
+        br
+      //- 右边详情框（用户头像，喜欢数量，评论数量，转发）
+      dev(style="float:right;margin-right:3%;margin-top:50%")
+        li(style="list-style-type:none;")
+          //- 用户
+          img(src="/images/admin/user.jpg" style="height:72px;width:72px;border-radius:50%; " referrerpolicy="no-referrer")
+          p  &nbsp;&nbsp;&nbsp;9999+
+        br
+        li(style="list-style-type:none;")
+          //- 喜欢
+          img(src="/images/icon/love_red.png" style="height:72px;width:72px;")
+          p  &nbsp;&nbsp;&nbsp;9999+
+        br
+        li(style="list-style-type:none;")
+          //- 评论
+          img(src="/images/icon/comment.png" style="height:72px;width:72px;")
+          p  &nbsp;&nbsp;&nbsp;9999+
+        br
+        li(style="list-style-type:none;")
+          //- 转发
+          img(src="/images/icon/share.png" style="height:72px;width:72px;")
+          p  &nbsp;&nbsp;&nbsp;9999+
       //- 诗歌来自和作者
-      dev(align="right" style="")
+      dev(align="right" style="float:left;width:80%;")
         p
           //- white
-          font(face="隶书" size="7" style="color:#bfbfbf;" ) --出自&nbsp;#{data.content_from}&nbsp;&nbsp;&nbsp;&nbsp;#{data.author}
-
-      //- 右边详情框（用户头像，喜欢数量，评论数量，转发）
-      //- dev
-      //-   p 用户
-      //-   p 喜欢
-      //-   p 评论
-      //-   p 转发
+          font(face="隶书" size="7" style="color:#515151;" ) --出自&nbsp;#{data.content_from}&nbsp;&nbsp;&nbsp;&nbsp;#{data.author}
       
+      
+
       //- 下边切换框（首页，收藏，喜欢，历史，上传，用户）
       //- dev
       //-   p 首页
