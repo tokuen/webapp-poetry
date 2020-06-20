@@ -4,9 +4,11 @@ html.html_class(onclick="location.reload();")
   //- body
   body.body_class(style="background:url('#{data.long_photo}') no-repeat;background-size:cover;background-attachment: fixed;background-repeat:no-repeat;")
 
+     //- 隐藏的dev
+    dev(style="visibility:hidden")
+      p() #{data.id}
+
     dev(style="width:100%;hight:100%")
-      //- 隐藏的dev
-      //- p() #{data.id}
       //- 上边搜索框dev
       //- dev(style="float:left;margin-top:1%;width:100%;height:144px;")
         //-  style="height:50px;width:50px;" display: block; EBEBEB
@@ -50,7 +52,7 @@ html.html_class(onclick="location.reload();")
       dev(align="right" style="float:left;margin-bottom:10%;width:100%;")
         p
           //- font(face="隶书" size="7" style="color:#C2C0BA;" ) --出自&nbsp;#{data.content_from}&nbsp;&nbsp;&nbsp;&nbsp;#{data.author}
-          font(face="隶书" size="7" style="color:#C2C0BA;" ) &nbsp;&nbsp;&nbsp;&nbsp;#{data.author}
+          font(face="隶书" size="7" style="color:#C2C0BA;" ) &nbsp;&nbsp;&nbsp;&nbsp;!{data.author}
 
       //- 下边切换框（首页，收藏，喜欢，历史，上传，用户）
       //- dev(style="float:left;margin-bottom:0%;height:144px;width:100%")
