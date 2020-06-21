@@ -2,7 +2,7 @@ var express = require('express');
 var request = require('request');
 var router = express.Router();
 router.get('/', function(req, res, next) {
-  request.post({url:'http://localhost:8080/poetry/poetry/getRandomPoetry', form: {"name" : "john"}}, 
+  request.post({url:'http://localhost:8000/poetry/poetry/getRandomPoetry', form: {"name" : "john"}},
     function (err, httpResponse, body) {
         if (err) {
           res.render('error');

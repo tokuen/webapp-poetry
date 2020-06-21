@@ -7,7 +7,6 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var getRouter = require('./routes/get');
-
 var app = express();
 
 //定义方法
